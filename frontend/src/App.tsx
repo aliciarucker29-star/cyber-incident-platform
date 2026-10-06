@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import ReactMarkdown from 'react-markdown'
 
 type Indicator = {
   type?: string
@@ -322,7 +323,11 @@ function App() {
                 <div className="ai-report">
                   <h3>AI Investigation Summary</h3>
 
-                  <p>{aiInvestigation.summary}</p>
+                  <div className="ai-markdown">
+                    <ReactMarkdown>
+                      {aiInvestigation.summary ?? ''}
+                    </ReactMarkdown>
+                  </div>
 
                   <div className="ai-meta">
                     <span>
