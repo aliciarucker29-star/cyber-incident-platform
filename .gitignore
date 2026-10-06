@@ -1,0 +1,32 @@
+# Environment variables / secrets
+.env
+backend/.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# C++ build artifacts
+investigation-engine/build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# C++ compiler/debug artifacts
+*.obj
+*.i
+*.o
+*.exe
+preprocessed.txt
+
+# Temporary test files
+investigation-engine/test_indicator.cpp

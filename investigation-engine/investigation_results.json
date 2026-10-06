@@ -1,0 +1,352 @@
+[
+    {
+        "hostname": "WORKSTATION-01",
+        "incident_id": 1,
+        "indicators": [
+            {
+                "confidence": 100,
+                "context": "Public IP address observed; external reputation not yet checked",
+                "reputation": "unknown",
+                "source": "incident_evidence",
+                "type": "ip_address",
+                "value": "203.0.113.50"
+            }
+        ],
+        "mitre_attack": [
+            {
+                "confidence": "high",
+                "reason": "Repeated failed authentication attempts against the same account are consistent with password guessing behavior.",
+                "tactic": "Credential Access",
+                "technique_id": "T1110.001",
+                "technique_name": "Password Guessing"
+            },
+            {
+                "confidence": "medium",
+                "reason": "Multiple failed authentication attempts followed by a successful login may indicate use of valid credentials. This mapping is possible, not proof of account compromise.",
+                "tactic": "Initial Access",
+                "technique_id": "T1078",
+                "technique_name": "Valid Accounts"
+            }
+        ],
+        "risk_level": "critical",
+        "risk_reasons": [
+            "High-severity incident: +30",
+            "Multiple correlated detection rules: +20",
+            "Failed authentication followed by successful login: +25",
+            "Public IP address observed in incident evidence: +15"
+        ],
+        "risk_score": 90,
+        "severity": "high",
+        "source_ip": "203.0.113.50",
+        "timeline": [
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 2,
+                "hostname": "WORKSTATION-01",
+                "source_ip": "203.0.113.50",
+                "timestamp": "2026-09-24T13:15:00-05:00",
+                "username": "jsmith"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 3,
+                "hostname": "WORKSTATION-01",
+                "source_ip": "203.0.113.50",
+                "timestamp": "2026-09-24T13:15:00-05:00",
+                "username": "jsmith"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 4,
+                "hostname": "WORKSTATION-01",
+                "source_ip": "203.0.113.50",
+                "timestamp": "2026-09-24T13:16:00-05:00",
+                "username": "jsmith"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 5,
+                "hostname": "WORKSTATION-01",
+                "source_ip": "203.0.113.50",
+                "timestamp": "2026-09-24T13:17:00-05:00",
+                "username": "jsmith"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 6,
+                "hostname": "WORKSTATION-01",
+                "source_ip": "203.0.113.50",
+                "timestamp": "2026-09-24T13:18:00-05:00",
+                "username": "jsmith"
+            },
+            {
+                "action": "login_success",
+                "description": "Successful authentication",
+                "event_id": 7,
+                "hostname": "WORKSTATION-01",
+                "source_ip": "203.0.113.50",
+                "timestamp": "2026-09-24T13:19:00-05:00",
+                "username": "jsmith"
+            }
+        ],
+        "username": "jsmith"
+    },
+    {
+        "hostname": "LAPTOP-22",
+        "incident_id": 2,
+        "indicators": [
+            {
+                "confidence": 100,
+                "context": "Public IP address observed; external reputation not yet checked",
+                "reputation": "unknown",
+                "source": "incident_evidence",
+                "type": "ip_address",
+                "value": "198.51.100.25"
+            }
+        ],
+        "mitre_attack": [
+            {
+                "confidence": "high",
+                "reason": "Repeated failed authentication attempts against the same account are consistent with password guessing behavior.",
+                "tactic": "Credential Access",
+                "technique_id": "T1110.001",
+                "technique_name": "Password Guessing"
+            }
+        ],
+        "risk_level": "medium",
+        "risk_reasons": [
+            "High-severity incident: +30",
+            "Public IP address observed in incident evidence: +15"
+        ],
+        "risk_score": 45,
+        "severity": "high",
+        "source_ip": "198.51.100.25",
+        "timeline": [
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 8,
+                "hostname": "LAPTOP-22",
+                "source_ip": "198.51.100.25",
+                "timestamp": "2026-09-24T13:16:30-05:00",
+                "username": "adoe"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 9,
+                "hostname": "LAPTOP-22",
+                "source_ip": "198.51.100.25",
+                "timestamp": "2026-09-24T13:17:30-05:00",
+                "username": "adoe"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 10,
+                "hostname": "LAPTOP-22",
+                "source_ip": "198.51.100.25",
+                "timestamp": "2026-09-24T13:18:30-05:00",
+                "username": "adoe"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 11,
+                "hostname": "LAPTOP-22",
+                "source_ip": "198.51.100.25",
+                "timestamp": "2026-09-24T13:19:30-05:00",
+                "username": "adoe"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 12,
+                "hostname": "LAPTOP-22",
+                "source_ip": "198.51.100.25",
+                "timestamp": "2026-09-24T13:20:30-05:00",
+                "username": "adoe"
+            }
+        ],
+        "username": "adoe"
+    },
+    {
+        "hostname": "INTERNAL-PC",
+        "incident_id": 3,
+        "indicators": [
+            {
+                "confidence": 100,
+                "context": "Private IP address observed in incident evidence",
+                "reputation": "private",
+                "source": "incident_evidence",
+                "type": "ip_address",
+                "value": "192.168.1.50"
+            }
+        ],
+        "mitre_attack": [
+            {
+                "confidence": "high",
+                "reason": "Repeated failed authentication attempts against the same account are consistent with password guessing behavior.",
+                "tactic": "Credential Access",
+                "technique_id": "T1110.001",
+                "technique_name": "Password Guessing"
+            }
+        ],
+        "risk_level": "medium",
+        "risk_reasons": [
+            "High-severity incident: +30"
+        ],
+        "risk_score": 30,
+        "severity": "high",
+        "source_ip": "192.168.1.50",
+        "timeline": [
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 13,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:25:00-05:00",
+                "username": "private_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 15,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:25:00-05:00",
+                "username": "private_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 14,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:26:00-05:00",
+                "username": "private_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 16,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:26:00-05:00",
+                "username": "private_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 17,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:27:00-05:00",
+                "username": "private_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 18,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:28:00-05:00",
+                "username": "private_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 19,
+                "hostname": "INTERNAL-PC",
+                "source_ip": "192.168.1.50",
+                "timestamp": "2026-09-30T12:29:00-05:00",
+                "username": "private_test"
+            }
+        ],
+        "username": "private_test"
+    },
+    {
+        "hostname": "THRESHOLD-PC",
+        "incident_id": 4,
+        "indicators": [
+            {
+                "confidence": 100,
+                "context": "Private IP address observed in incident evidence",
+                "reputation": "private",
+                "source": "incident_evidence",
+                "type": "ip_address",
+                "value": "172.16.10.25"
+            }
+        ],
+        "mitre_attack": [
+            {
+                "confidence": "high",
+                "reason": "Repeated failed authentication attempts against the same account are consistent with password guessing behavior.",
+                "tactic": "Credential Access",
+                "technique_id": "T1110.001",
+                "technique_name": "Password Guessing"
+            }
+        ],
+        "risk_level": "medium",
+        "risk_reasons": [
+            "High-severity incident: +30"
+        ],
+        "risk_score": 30,
+        "severity": "high",
+        "source_ip": "172.16.10.25",
+        "timeline": [
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 25,
+                "hostname": "THRESHOLD-PC",
+                "source_ip": "172.16.10.25",
+                "timestamp": "2026-10-04T16:00:00-05:00",
+                "username": "threshold_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 26,
+                "hostname": "THRESHOLD-PC",
+                "source_ip": "172.16.10.25",
+                "timestamp": "2026-10-04T16:01:00-05:00",
+                "username": "threshold_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 27,
+                "hostname": "THRESHOLD-PC",
+                "source_ip": "172.16.10.25",
+                "timestamp": "2026-10-04T16:02:00-05:00",
+                "username": "threshold_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 28,
+                "hostname": "THRESHOLD-PC",
+                "source_ip": "172.16.10.25",
+                "timestamp": "2026-10-04T16:03:00-05:00",
+                "username": "threshold_test"
+            },
+            {
+                "action": "login_failed",
+                "description": "Failed authentication attempt",
+                "event_id": 29,
+                "hostname": "THRESHOLD-PC",
+                "source_ip": "172.16.10.25",
+                "timestamp": "2026-10-04T16:04:00-05:00",
+                "username": "threshold_test"
+            }
+        ],
+        "username": "threshold_test"
+    }
+]
