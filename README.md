@@ -52,6 +52,18 @@ Related security events are organized chronologically to help analysts understan
 ![Incident Timeline](screenshots/incident-investigation1.png)
 
 
+### AI-Assisted Incident Investigation
+
+The platform integrates the OpenAI API to generate readable, evidence-based cybersecurity investigation reports.
+
+The AI assistant uses structured incident data produced by the C++ investigation engine to explain suspicious activity, summarize authentication timelines, describe risk assessments, and recommend investigation steps.
+
+**AI does not make the detection decisions.** Detection, incident correlation, risk scoring, and MITRE ATT&CK mapping are handled by the investigation engine before the evidence is passed to the AI assistant.
+
+The example below shows an AI-generated report for Incident #1, which received a Critical risk score of 90/100.
+
+![AI-Generated Incident Investigation Report](screenshots/ai-investigation.png)
+
 \## Architecture
 
 
