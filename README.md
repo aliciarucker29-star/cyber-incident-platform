@@ -2,19 +2,25 @@
 
 
 
-\## Overview
+Overview
 
+The Automated Cyber Incident Investigation Platform is a full-stack cybersecurity application developed as a senior capstone project. It helps security analysts investigate suspicious activity by automatically analyzing security logs, detecting potential threats, and organizing related events into incidents.
 
+The application combines a React and TypeScript frontend, Python FastAPI backend, PostgreSQL database, and C++ investigation engine. It identifies suspicious authentication activity, reconstructs incident timelines, extracts indicators, calculates explainable risk scores, and maps supported activity to MITRE ATT&CK techniques.
 
-The Automated Cyber Incident Investigation Platform is a senior capstone project designed to automate key stages of cybersecurity incident investigation.
+An integrated OpenAI-powered investigation assistant generates readable reports using actual incident evidence. Detection and risk scoring remain rule-based, ensuring that results are transparent and verifiable.
 
+Project Highlights
 
+4 security incidents generated during project testing.
 
-The platform ingests security event data, stores it in PostgreSQL, analyzes events using a C++ investigation engine, correlates related detections into incidents, constructs investigation timelines, extracts indicators of compromise, calculates transparent risk scores, maps supported behavior to MITRE ATT\&CK techniques, and presents investigation results through a React dashboard.
+22 functional and integration tests passed.
 
+Rule-based detection of repeated failed logins and failed-to-successful authentication.
 
+Explainable risk scoring and evidence-supported MITRE ATT&CK mapping.
 
-An AI-assisted investigation component generates evidence-grounded summaries and recommended investigation steps. The AI is used to explain and summarize existing evidence rather than acting as the primary detection authority.
+Interactive dashboard with incident timelines and AI-assisted investigation reports.
 
 
 
