@@ -24,6 +24,15 @@ Interactive dashboard with incident timelines and AI-assisted investigation repo
 
 
 
+## Application Screenshots
+
+### Security Incident Dashboard
+
+The dashboard displays detected security incidents with associated usernames, hosts, source IP addresses, severity levels, and calculated risk scores.
+
+![Security Incident Dashboard](screenshots/React.png)
+
+
 \## Architecture
 
 
