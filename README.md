@@ -33,6 +33,25 @@ The dashboard displays detected security incidents with associated usernames, ho
 ![Security Incident Dashboard](screenshots/React.png)
 
 
+### Incident Investigation and Risk Assessment
+
+The platform provides detailed incident investigations with explainable risk scores, contributing risk factors, and extracted indicators. Incident #1 received a Critical risk score of 90/100 based on correlated authentication activity and supporting evidence.
+
+![Incident Investigation and Risk Assessment](screenshots/incident-investigation2.png)
+
+### MITRE ATT&CK Mapping
+
+The investigation engine maps observed security activity to relevant MITRE ATT&CK techniques. Each mapping includes a confidence level and supporting explanation to distinguish potential threats from confirmed compromises.
+
+![MITRE ATT&CK Mapping](screenshots/incident-investigation3.png)
+
+### Incident Timeline Reconstruction
+
+Related security events are organized chronologically to help analysts understand how an incident developed. This example shows repeated failed authentication attempts followed by a successful login.
+
+![Incident Timeline](screenshots/incident-investigation1.png)
+
+
 \## Architecture
 
 
