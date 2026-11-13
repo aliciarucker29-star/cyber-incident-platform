@@ -1,8 +1,17 @@
 \# Automated Cyber Incident Investigation Platform
 
 
+## Watch the Project Demo
 
-Overview
+Watch a short demonstration of the Automated Cyber Incident Investigation Platform.
+
+The video showcases the React dashboard, detected security incidents, explainable risk scoring, MITRE ATT&CK mappings, investigation timelines, and AI-generated investigation reports.
+
+**[Watch the Application Demo on YouTube](https://youtu.be/l8B7o_2PfZc?si=zG_NHZAFDJpaYNvn)**
+
+*This is a silent screen recording demonstrating the application's functionality.*
+
+# Overview
 
 The Automated Cyber Incident Investigation Platform is a full-stack cybersecurity application developed as a senior capstone project. It helps security analysts investigate suspicious activity by automatically analyzing security logs, detecting potential threats, and organizing related events into incidents.
 
